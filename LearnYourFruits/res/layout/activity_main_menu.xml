@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Select a Fruit."
+                android:text="@string/main_menu_select"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#000000"
                 android:textSize="28sp" />
@@ -76,29 +76,29 @@
                                 android:id="@+id/txt_f_name1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Large Text"
+                                android:text="@string/fr_apple"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
-
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="left" >
 
                             <TextView
                                 android:id="@+id/txt_f_name2"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="left"
                                 android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Large Text"
+                                android:gravity="left"
+                                android:text="@string/fr_avocado"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                         </LinearLayout>
 
@@ -112,12 +112,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:gravity="right"
-                                android:text="Large Text"
+                                android:text="@string/fr_banana"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
-
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </TableRow>
 
@@ -137,10 +135,10 @@
                                 android:id="@+id/txt_f_name4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Large Text"
+                                android:text="@string/fr_blackberries"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -154,11 +152,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Large Text"
+                                android:text="@string/fr_cherries"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -171,11 +168,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:gravity="right"
-                                android:text="Large Text"
+                                android:text="@string/fr_dates"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#000000"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </TableRow>
 
@@ -183,15 +179,282 @@
                         android:id="@+id/tableRow3"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
                         android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fr_grape_fruit"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name8"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_grapes"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name9"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_guava"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
                     </TableRow>
 
                     <TableRow
                         android:id="@+id/tableRow4"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
                         android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fr_kiwifruit"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name11"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_lemons"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name12"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_limes"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
                     </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fr_mangoes"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name14"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_oranges"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name15"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_papayas"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fr_peaches"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name17"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_pear"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name18"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_pineapple"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fr_raspberries"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name20"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_strawberries"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/txt_f_name21"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/fr_watermelon"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </TableRow>
+
                 </TableLayout>
 
             </LinearLayout>

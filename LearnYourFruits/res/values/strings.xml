@@ -7,5 +7,29 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_main_menu">Main_menu</string>
     <string name="title_activity_fruit__detail">Fruit_Detail</string>
+    <string name="main_menu_select">Select a Fruit</string>
+    
+    <string name="fr_apple">Apple</string>
+    <string name="fr_avocado">Avacado</string>
+    <string name="fr_banana">Banana</string>    
+    <string name="fr_blackberries">Blackberries</string>
+    <string name="fr_cherries">Cherries</string>
+    <string name="fr_dates">Dates</string>   
+    <string name="fr_grape_fruit">Grape Fruit</string>
+    <string name="fr_grapes">Grapes</string>
+    <string name="fr_guava">Guava</string>
+    <string name="fr_kiwifruit">Kiwi Fruit</string>
+    <string name="fr_lemons">Lemon</string>
+    <string name="fr_limes">Lime</string>
+    <string name="fr_mangoes">Mangoe</string>
+    <string name="fr_oranges">Orange</string>
+    <string name="fr_papayas">Papaya</string>
+    <string name="fr_peaches">Peaches</string>
+    <string name="fr_pear">Pears</string>
+    <string name="fr_pineapple">Pineapple</string>
+    <string name="fr_raspberries">Raspberries</string>
+    <string name="fr_strawberries">Strawberries</string>
+    <string name="fr_watermelon">Watermelon</string>
+    
 
 </resources>

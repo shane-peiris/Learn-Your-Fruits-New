@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learn Your Fruits</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_main_menu">Main_menu</string>
+    <string name="title_activity_fruit__detail">Fruit_Detail</string>
+    <string name="main_menu_select">Select a Fruit</string>
+    
+    <string name="fr_apple">사과</string>
+    <string name="fr_avocado">아보카도</string>
+    <string name="fr_banana">바나나</string>    
+    <string name="fr_blackberries">블랙 베리</string>
+    <string name="fr_cherries">버찌</string>
+    <string name="fr_dates">날짜</string>   
+    <string name="fr_grape_fruit">자몽</string>
+    <string name="fr_grapes">포도</string>
+    <string name="fr_guava">구아바</string>
+    <string name="fr_kiwifruit">키위 과일</string>
+    <string name="fr_lemons">레몬</string>
+    <string name="fr_limes">석회</string>
+    <string name="fr_mangoes">망고</string>
+    <string name="fr_oranges">오렌지</string>
+    <string name="fr_papayas">파파야</string>
+    <string name="fr_peaches">복숭아</string>
+    <string name="fr_pear">배</string>
+    <string name="fr_pineapple">파인애플</string>
+    <string name="fr_raspberries">산딸기</string>
+    <string name="fr_strawberries">딸기</string>
+    <string name="fr_watermelon">수박</string>
+    
+
+</resources>

@@ -7,7 +7,7 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_main_menu">Main_menu</string>
     <string name="title_activity_fruit__detail">Fruit_Detail</string>
-    <string name="main_menu_select">Select a Fruit</string>
+    <string name="main_menu_select">과일을 선택</string>
     
     <string name="fr_apple">사과</string>
     <string name="fr_avocado">아보카도</string>

@@ -192,7 +192,7 @@ public class Fruit_Detail extends Activity {
 	        {
 	        	drawables.add(getResources().getDrawable(R.drawable.avacado1));
 		        drawables.add(getResources().getDrawable(R.drawable.avacado2));
-		        drawables.add(getResources().getDrawable(R.drawable.avacado3));		        
+		        drawables.add(getResources().getDrawable(R.drawable.avacado3)); 	        	
 	        }
 	        
 

@@ -1,13 +1,25 @@
 package assign.project.learnyourfruits;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.R.id;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class Main_menu extends Activity {
+public class Main_menu extends Activity implements OnClickListener {
 
+	Intent fruit_details;
+	TextView[] tv=new TextView[21];
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -16,9 +28,11 @@ public class Main_menu extends Activity {
 		
 		TextView tv1 = (TextView) findViewById(R.id.txt_select_title);
 		
-		TextView[] tv=new TextView[21];
 		
-		tv[0] = (TextView) findViewById(R.id.txt_f_name1);
+		
+		
+		
+		tv[0] = (TextView) findViewById(R.id.txt_f_name1);		
 		tv[1] = (TextView) findViewById(R.id.txt_f_name2);
 		tv[2] = (TextView) findViewById(R.id.txt_f_name3);
 		tv[3] = (TextView) findViewById(R.id.txt_f_name4);
@@ -42,13 +56,15 @@ public class Main_menu extends Activity {
 		
 		
 		
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/comic.ttf");		
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/JandaCloserToFree.ttf");		
 	
 		tv1.setTypeface(tf);
 		
 		for (int i=0; i<21;i++)
 		{
-			tv[i].setTypeface(tf);			
+			
+			tv[i].setTypeface(tf);	
+			tv[i].setOnClickListener(this);
 		}
 	}
 
@@ -57,6 +73,34 @@ public class Main_menu extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main_menu, menu);
 		return true;
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+		
+		ArrayList<Integer> options = new ArrayList<Integer>();
+		options.add(R.id.txt_f_name1);
+		options.add(R.id.txt_f_name2);
+		
+		
+		for(int i=0;i<2;i++)
+		{
+			if (v.getId() == options.get(i)) {
+				fruit_details = new Intent(getApplicationContext(),
+						Fruit_Detail.class);
+				fruit_details.putExtra("fruit_id", String.valueOf(i));				
+				fruit_details.putExtra("fruit_name", tv[i].getText().toString());
+				startActivity(fruit_details);			
+			}			
+		}
+		
+		
+		
+		
+		
+		
 	}
 
 }

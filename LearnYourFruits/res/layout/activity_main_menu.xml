@@ -70,7 +70,8 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1"
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name1"
@@ -80,13 +81,14 @@
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="left" >
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name2"
@@ -94,7 +96,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
                                 android:layout_weight="1"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:text="@string/fr_avocado"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
@@ -112,23 +114,27 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name3"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_banana"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name4"
@@ -153,33 +159,38 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name5"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_cherries"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name6"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_dates"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -193,7 +204,8 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name7"
@@ -209,17 +221,19 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center"  >
 
                             <TextView
                                 android:id="@+id/txt_f_name8"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_grapes"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -233,23 +247,27 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name9"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_guava"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name10"
@@ -273,33 +291,38 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center"  >
 
                             <TextView
                                 android:id="@+id/txt_f_name11"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_lemons"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name12"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_limes"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -313,7 +336,8 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name13"
@@ -329,17 +353,19 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name14"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_oranges"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -353,23 +379,27 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name15"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_papayas"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name16"
@@ -393,33 +423,38 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name17"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_pear"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1"
+                            android:gravity="center"  >
 
                             <TextView
                                 android:id="@+id/txt_f_name18"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_pineapple"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -432,7 +467,8 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1" 
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name19"
@@ -448,17 +484,19 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right" >
+                            android:gravity="center"  >
 
                             <TextView
                                 android:id="@+id/txt_f_name20"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_strawberries"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+
                         </LinearLayout>
                     </TableRow>
 
@@ -471,17 +509,26 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1"
+                            android:gravity="center" >
 
                             <TextView
                                 android:id="@+id/txt_f_name21"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="center"
                                 android:text="@string/fr_watermelon"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
                         </LinearLayout>
 
                     </TableRow>

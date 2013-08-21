@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
@@ -54,7 +55,7 @@ public class Fruit_Detail extends Activity {
 		cur_fruit_name.setTypeface(tf);
 		
 		
-		getDrawablesList(fruit_id);
+		getDrawablesList(fruit_name);
         setupUI();
 	}
 
@@ -181,20 +182,19 @@ public class Fruit_Detail extends Activity {
 
 	        drawables = new ArrayList<Drawable>();
 	        
-	        if (id.equals("0"))
-	        {
-		        drawables.add(getResources().getDrawable(R.drawable.apple1));
-		        drawables.add(getResources().getDrawable(R.drawable.apple2));
-		        drawables.add(getResources().getDrawable(R.drawable.apple3));
-		        drawables.add(getResources().getDrawable(R.drawable.apple4));
-	        }
-	        else if(id.equals("1"))
-	        {
-	        	drawables.add(getResources().getDrawable(R.drawable.avacado1));
-		        drawables.add(getResources().getDrawable(R.drawable.avacado2));
-		        drawables.add(getResources().getDrawable(R.drawable.avacado3)); 	        	
-	        }
+	        Resources res = getResources();
 	        
+	        String f_name = id.toLowerCase();
+	        
+	        int resID1 = res.getIdentifier(f_name+"1", "drawable", getPackageName());
+	        int resID2 = res.getIdentifier(f_name+"2", "drawable", getPackageName());
+	        int resID3 = res.getIdentifier(f_name+"3", "drawable", getPackageName());
+	        
+	        //Drawable drawable = res.getDrawable(resID);
+	        
+		        drawables.add(getResources().getDrawable(resID1));
+		        drawables.add(getResources().getDrawable(resID2));
+		        drawables.add(getResources().getDrawable(resID3));
 
 	    }
 

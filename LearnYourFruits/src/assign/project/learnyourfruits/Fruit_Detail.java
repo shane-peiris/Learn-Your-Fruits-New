@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -51,12 +52,20 @@ public class Fruit_Detail extends Activity {
 		cur_fruit_name.setText(fruit_name.toString());
 		
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/JandaCloserToFree.ttf");		
+		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/delte.ttf");
 		
-		cur_fruit_name.setTypeface(tf);
+		cur_fruit_name.setTypeface(tf2);
+		cur_fruit_name.setTextSize(65);
+		cur_fruit_name.setTextColor(Color.parseColor("#fec01d"));
+		cur_fruit_name.setShadowLayer((float)7, (float)8, (float)5, Color.parseColor("#000000"));
 		
-		
-		getDrawablesList(fruit_name);
-        setupUI();
+		try
+		{
+			getDrawablesList(fruit_name);
+	        setupUI();
+		}
+		catch(Exception ex)
+		{}
 	}
 
 	@Override

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@drawable/bg_new_land"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -31,16 +31,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:layout_width="285dp"
-                android:layout_height="wrap_content"
+                android:layout_height="225dp"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="0.21"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <ImageView
@@ -68,14 +67,14 @@
                         android:src="@drawable/arrow_left_disabled" />
 
                      <Gallery
-			            android:id="@+id/gallery"
-			            android:layout_width="0dip"
-			            android:layout_height="150dip"
-			            android:layout_marginLeft="20dip"
-			            android:layout_marginRight="20dip"
-			            android:layout_toLeftOf="@+id/right_arrow_imageview"
-			            android:layout_toRightOf="@+id/left_arrow_imageview"
-			            android:spacing="20dip" />
+                         android:id="@+id/gallery"
+                         android:layout_width="0dip"
+                         android:layout_height="150dip"
+                         android:layout_marginLeft="20dip"
+                         android:layout_marginRight="20dip"
+                         android:layout_toLeftOf="@+id/right_arrow_imageview"
+                         android:layout_toRightOf="@+id/left_arrow_imageview"
+                         android:spacing="20dip" />
 
                     <ImageView
                         android:id="@+id/right_arrow_imageview"

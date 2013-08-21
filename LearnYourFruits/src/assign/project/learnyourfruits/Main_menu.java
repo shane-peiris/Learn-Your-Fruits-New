@@ -8,6 +8,7 @@ import android.R.id;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
@@ -82,15 +83,25 @@ public class Main_menu extends Activity implements OnClickListener {
 		tv[20] = (TextView) findViewById(R.id.txt_f_name21)*/
 		
 		//Font File		
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/JandaCloserToFree.ttf");		
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/mickey.TTF");
+		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/Minnie.TTF");	
+		Typeface tf3 = Typeface.createFromAsset(getAssets(), "fonts/delte.ttf");	
+		Typeface tf4 = Typeface.createFromAsset(getAssets(), "fonts/spanky.TTF");	
 	
-		txt_title.setTypeface(tf);
+		txt_title.setTypeface(tf2);
+		txt_title.setTextSize(38);
+		txt_title.setTextColor(Color.parseColor("#1a97cf"));
+		txt_title.setShadowLayer((float)2, (float)9, (float)5, Color.parseColor("#ef864c"));
+		//txt_title.setEms(20);
 		
 		for (int i=0; i<21;i++)
 		{
 			
-			tv[i].setTypeface(tf);	
+			tv[i].setTypeface(tf3);	
 			tv[i].setOnClickListener(this);
+			tv[i].setTextColor(Color.parseColor("#b81d66"));
+			tv[i].setTextSize(32);
+			tv[i].setShadowLayer((float)2, (float)2, (float)5, Color.parseColor("#000000"));
 		}
 	}
 
@@ -110,7 +121,7 @@ public class Main_menu extends Activity implements OnClickListener {
 		
 		
 		
-		for(int i=0;i<2;i++)
+		for(int i=0;i<21;i++)
 		{
 			if (v.getId() == fruit_list.get(i)) {
 				fruit_details = new Intent(getApplicationContext(),

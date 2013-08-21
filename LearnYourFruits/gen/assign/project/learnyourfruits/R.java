@@ -35,12 +35,13 @@ public final class R {
         public static final int bg=0x7f020009;
         public static final int bg_f=0x7f02000a;
         public static final int bg_new=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int image_border=0x7f02000d;
-        public static final int menu_title_en=0x7f02000e;
-        public static final int org=0x7f02000f;
-        public static final int selected_image_border=0x7f020010;
-        public static final int test=0x7f020011;
+        public static final int bg_new_land=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int image_border=0x7f02000e;
+        public static final int menu_title_en=0x7f02000f;
+        public static final int org=0x7f020010;
+        public static final int selected_image_border=0x7f020011;
+        public static final int test=0x7f020012;
     }
     public static final class id {
         public static final int action_settings=0x7f080029;
@@ -71,9 +72,9 @@ public final class R {
         public static final int txt_f_name14=0x7f08001d;
         public static final int txt_f_name15=0x7f08001f;
         public static final int txt_f_name16=0x7f080020;
-        public static final int txt_f_name17=0x7f080022;
+        public static final int txt_f_name17=0x7f080025;
         public static final int txt_f_name18=0x7f080023;
-        public static final int txt_f_name19=0x7f080025;
+        public static final int txt_f_name19=0x7f080022;
         public static final int txt_f_name2=0x7f08000b;
         public static final int txt_f_name20=0x7f080026;
         public static final int txt_f_name21=0x7f080028;

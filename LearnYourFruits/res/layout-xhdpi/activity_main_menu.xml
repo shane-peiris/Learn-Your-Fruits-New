@@ -426,16 +426,13 @@
                             android:gravity="center" >
 
                             <TextView
-                                android:id="@+id/txt_f_name17"
-                                android:layout_width="0dp"
+                                android:id="@+id/txt_f_name19"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="@string/fr_pear"
+                                android:text="@string/fr_raspberries"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -467,14 +464,16 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" 
+                            android:layout_weight="1"
                             android:gravity="center" >
 
                             <TextView
-                                android:id="@+id/txt_f_name19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/txt_f_name17"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="@string/fr_raspberries"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/fr_pear"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="#00a2ff"
                                 android:textSize="18sp" />

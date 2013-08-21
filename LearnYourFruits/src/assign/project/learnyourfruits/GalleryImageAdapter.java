@@ -67,7 +67,7 @@ public class GalleryImageAdapter  extends BaseAdapter {
         holder.imageView.setImageDrawable(plotsImages.get(position));
 
         holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        holder.imageView.setLayoutParams(new Gallery.LayoutParams(150, 90));
+        holder.imageView.setLayoutParams(new Gallery.LayoutParams(100, 70));
 
         return imageView;
     }

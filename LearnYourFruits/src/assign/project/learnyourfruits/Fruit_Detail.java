@@ -172,9 +172,9 @@ public class Fruit_Detail extends Activity {
 	 private void setSelectedImage(int selectedImagePosition) {
 
 	        BitmapDrawable bd = (BitmapDrawable) drawables.get(selectedImagePosition);
-	        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight() * 0.9), (int) (bd.getIntrinsicWidth() * 0.7), false);
+	        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight()), (int) (bd.getIntrinsicWidth()), false);
 	        selectedImageView.setImageBitmap(b);
-	        selectedImageView.setScaleType(ScaleType.FIT_XY);
+	        //selectedImageView.setScaleType(ScaleType.FIT_XY);
 
 	    }
 	
@@ -191,10 +191,17 @@ public class Fruit_Detail extends Activity {
 	        int resID3 = res.getIdentifier(f_name+"3", "drawable", getPackageName());
 	        
 	        //Drawable drawable = res.getDrawable(resID);
-	        
-		        drawables.add(getResources().getDrawable(resID1));
-		        drawables.add(getResources().getDrawable(resID2));
-		        drawables.add(getResources().getDrawable(resID3));
+	        	try
+		        {
+	        		drawables.add(getResources().getDrawable(resID1));
+	        		drawables.add(getResources().getDrawable(resID2));		        
+		        	drawables.add(getResources().getDrawable(resID3));
+		        }
+		        catch(Exception ex)
+		        {
+		        	
+		        	
+		        }
 
 	    }
 

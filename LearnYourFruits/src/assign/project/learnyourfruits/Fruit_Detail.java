@@ -48,6 +48,7 @@ public class Fruit_Detail extends Activity {
 		
 		String fruit_id = fruit_details.getString("fruit_id");	
 		String fruit_name = fruit_details.getString("fruit_name");	
+		String fruit_img = fruit_details.getString("fruit_img");	
 		
 		cur_fruit_name.setText(fruit_name.toString());
 		
@@ -61,7 +62,7 @@ public class Fruit_Detail extends Activity {
 		
 		try
 		{
-			getDrawablesList(fruit_name);
+			getDrawablesList(fruit_img);
 	        setupUI();
 		}
 		catch(Exception ex)

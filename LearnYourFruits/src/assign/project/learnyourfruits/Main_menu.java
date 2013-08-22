@@ -21,6 +21,7 @@ public class Main_menu extends Activity implements OnClickListener {
 	Intent fruit_details;
 	TextView[] tv=new TextView[21];
 	ArrayList<Integer> fruit_list = new ArrayList<Integer>();
+	ArrayList<String> fruit_name = new ArrayList<String>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,29 @@ public class Main_menu extends Activity implements OnClickListener {
 		fruit_list.add(R.id.txt_f_name19);
 		fruit_list.add(R.id.txt_f_name20);
 		fruit_list.add(R.id.txt_f_name21);
+		
+		fruit_name.add("apple");
+		fruit_name.add("avacado");
+		fruit_name.add("banana");
+		fruit_name.add("blackberries");
+		fruit_name.add("cherries");
+		fruit_name.add("dates");
+		fruit_name.add("grapefruit");
+		fruit_name.add("guava");
+		fruit_name.add("grapes");
+		fruit_name.add("kiwifruit");
+		fruit_name.add("lemon");
+		fruit_name.add("lime");
+		fruit_name.add("mangoe");
+		fruit_name.add("orange");
+		fruit_name.add("papaya");
+		fruit_name.add("peaches");
+		fruit_name.add("pears");
+		fruit_name.add("pineapple");
+		fruit_name.add("raspberries");
+		fruit_name.add("strawberries");
+		fruit_name.add("watermelon");
+		
 		
 		
 		TextView txt_title = (TextView) findViewById(R.id.txt_select_title);
@@ -126,7 +150,8 @@ public class Main_menu extends Activity implements OnClickListener {
 			if (v.getId() == fruit_list.get(i)) {
 				fruit_details = new Intent(getApplicationContext(),
 						Fruit_Detail.class);
-				fruit_details.putExtra("fruit_id", String.valueOf(i));				
+				fruit_details.putExtra("fruit_id", String.valueOf(i));
+				fruit_details.putExtra("fruit_img", fruit_name.get(i));
 				fruit_details.putExtra("fruit_name", tv[i].getText().toString());
 				startActivity(fruit_details);			
 			}			

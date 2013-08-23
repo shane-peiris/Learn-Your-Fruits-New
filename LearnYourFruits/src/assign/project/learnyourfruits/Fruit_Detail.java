@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -61,16 +63,36 @@ public class Fruit_Detail extends Activity {
 	    public int fruit_id;
 	
 	    public TextView cur_fruit_name;
+	    
+	    public ImageView swip_r,swip_l;
+	    
+	    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fruit__detail);
-				
+		mContext = this;		
 		init_array();
+		
+		
+		
+		
 		
 		Bundle fruit_details = getIntent().getExtras();
 		
-		cur_fruit_name = (TextView) findViewById(R.id.txt_cur_fruit_name);		
+		cur_fruit_name = (TextView) findViewById(R.id.txt_cur_fruit_name);
+		swip_r = (ImageView) findViewById(R.id.img_swip_r);
+		swip_l = (ImageView) findViewById(R.id.img_swip_l);
+		
+		
+		
+		swip_prv();
+		
+		
+		
+		
+		//swip_r.setVisibility(View.INVISIBLE);
+		//swip_l.setVisibility(View.INVISIBLE);
 		
 		fruit_id = Integer.parseInt(fruit_details.getString("fruit_id")) ;	
 		String fruit_name = fruit_details.getString("fruit_name");	
@@ -101,7 +123,10 @@ public class Fruit_Detail extends Activity {
 		vf.setOnTouchListener(new OnTouchListener() {
 	        @Override
 	        public boolean onTouch(final View view, final MotionEvent event) {
+	        	
+	        	
 	        	detector.onTouchEvent(event);
+	        	 
 	            return true;
 	        }
 	    });
@@ -119,6 +144,8 @@ public class Fruit_Detail extends Activity {
 	
 	private void setupUI() {
 
+		try{
+		
         selectedImageView = (ImageView) findViewById(R.id.selected_imageview);
         leftArrowImageView = (ImageView) findViewById(R.id.left_arrow_imageview);
         rightArrowImageView = (ImageView) findViewById(R.id.right_arrow_imageview);
@@ -198,6 +225,9 @@ public class Fruit_Detail extends Activity {
 
             rightArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_disabled));
         }
+		}
+		catch(Exception ex)
+		{}
 
     }
 	
@@ -227,6 +257,29 @@ public class Fruit_Detail extends Activity {
 	        //selectedImageView.setScaleType(ScaleType.FIT_XY);
 
 	    }
+	 
+	 public void swip_prv()
+	 {
+		 Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
+			swip_r.startAnimation(myFadeInAnimation);
+			swip_l.startAnimation(myFadeInAnimation);
+			
+			
+			 final Handler handler = new Handler();
+		        handler.postDelayed(new Runnable() {
+		          @Override
+		          public void run() {
+		        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+		      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+		      		swip_r.startAnimation(myFadeOutAnimation);
+		      		swip_l.startAnimation(myFadeOutAnimation);
+		            
+		            
+		          }
+		        }, 	4000);
+		 
+		 
+	 }
 	
 	  private void getDrawablesList(String id) {
 
@@ -236,15 +289,16 @@ public class Fruit_Detail extends Activity {
 	        
 	        String f_name = id.toLowerCase();
 	        
-	        int resID1 = res.getIdentifier(f_name+"1", "drawable", getPackageName());
-	        int resID2 = res.getIdentifier(f_name+"2", "drawable", getPackageName());
-	        int resID3 = res.getIdentifier(f_name+"3", "drawable", getPackageName());
+	        
 	        
 	        //Drawable drawable = res.getDrawable(resID);
 	        	try
 		        {
+	        		int resID1 = res.getIdentifier(f_name+"1", "drawable", getPackageName());
 	        		drawables.add(getResources().getDrawable(resID1));
-	        		drawables.add(getResources().getDrawable(resID2));		        
+	    	        int resID2 = res.getIdentifier(f_name+"2", "drawable", getPackageName());
+	    	        drawables.add(getResources().getDrawable(resID2));	
+	    	        int resID3 = res.getIdentifier(f_name+"3", "drawable", getPackageName()); 
 		        	drawables.add(getResources().getDrawable(resID3));
 		        }
 		        catch(Exception ex)
@@ -264,10 +318,10 @@ public class Fruit_Detail extends Activity {
 			fruit_name.add("Blackberries");
 			fruit_name.add("Cherries");
 			fruit_name.add("Dates");
-			fruit_name.add("Grape fruit");
+			fruit_name.add("Grape Fruit");
 			fruit_name.add("Guava");
 			fruit_name.add("Grapes");
-			fruit_name.add("Kiwi fruit");
+			fruit_name.add("Kiwi Fruit");
 			fruit_name.add("Lemon");
 			fruit_name.add("Lime");
 			fruit_name.add("Mangoe");
@@ -313,6 +367,9 @@ public class Fruit_Detail extends Activity {
 					float velocityY) {
 				try {
 
+					
+					
+					
 					// right to left swipe
 					if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE
 							&& Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
@@ -322,14 +379,14 @@ public class Fruit_Detail extends Activity {
 								R.anim.left_out));
 						//vf.showNext();
 						
-						Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
+						//Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
 						
 						int temp_fruit_id=0;
 						
-						if(fruit_id+1 > 21)
-							temp_fruit_id = 0;
+						if(fruit_id+1 > 21)						
+							fruit_id=0;						
 						else
-							temp_fruit_id = fruit_id  +1;
+							fruit_id++;
 						
 						//Intent fruit_details = new Intent(getApplicationContext(),
 						//		Fruit_Detail.class);
@@ -341,10 +398,11 @@ public class Fruit_Detail extends Activity {
 						
 						
 						try
-						{
-							getDrawablesList(fruit_img_name.get(temp_fruit_id));
-							cur_fruit_name.setText(fruit_name.get(temp_fruit_id));
+						{							
+							cur_fruit_name.setText(fruit_name.get(fruit_id));
+							getDrawablesList(fruit_img_name.get(fruit_id));
 					        setupUI();
+					        swip_prv();
 						}
 						catch(Exception ex)
 						{}
@@ -359,14 +417,14 @@ public class Fruit_Detail extends Activity {
 								R.anim.right_out));
 						//vf.showPrevious();
 						
-						Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
+						//Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
 						
 						int temp_fruit_id=0;
 						
 						if(fruit_id-1 < 0)
-							temp_fruit_id = 21;
+							fruit_id=21;
 						else
-							temp_fruit_id = fruit_id  -1;
+							fruit_id--;
 						
 						//Intent fruit_details = new Intent(getApplicationContext(),
 						//		Fruit_Detail.class);
@@ -377,10 +435,11 @@ public class Fruit_Detail extends Activity {
 						//Fruit_Detail.this.finish();
 						
 						try
-						{
-							getDrawablesList(fruit_img_name.get(temp_fruit_id));
-							cur_fruit_name.setText(fruit_name.get(temp_fruit_id));
+						{							
+							cur_fruit_name.setText(fruit_name.get(fruit_id));
+							getDrawablesList(fruit_img_name.get(fruit_id));
 					        setupUI();
+					        swip_prv();
 						}
 						catch(Exception ex)
 						{}

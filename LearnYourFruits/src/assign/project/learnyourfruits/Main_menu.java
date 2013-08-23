@@ -6,6 +6,7 @@ import java.util.List;
 
 import android.R.id;
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,6 +15,9 @@ import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Main_menu extends Activity implements OnClickListener {
@@ -22,6 +26,8 @@ public class Main_menu extends Activity implements OnClickListener {
 	TextView[] tv=new TextView[21];
 	ArrayList<Integer> fruit_list = new ArrayList<Integer>();
 	ArrayList<String> fruit_name = new ArrayList<String>();
+	
+	 public ImageView swip_up;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +133,26 @@ public class Main_menu extends Activity implements OnClickListener {
 			tv[i].setTextSize(32);
 			tv[i].setShadowLayer((float)2, (float)2, (float)5, Color.parseColor("#000000"));
 		}
+		
+		swip_up = (ImageView) findViewById(R.id.img_swipe_up);
+		
+		 Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink);
+			swip_up.startAnimation(myFadeInAnimation);
+			
+			
+			
+			 final Handler handler = new Handler();
+		        handler.postDelayed(new Runnable() {
+		          @Override
+		          public void run() {
+		        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
+		      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+		        	  swip_up.startAnimation(myFadeOutAnimation);
+		      		
+		            
+		            
+		          }
+		        }, 	4000);
 	}
 
 	@Override
@@ -153,15 +179,35 @@ public class Main_menu extends Activity implements OnClickListener {
 				fruit_details.putExtra("fruit_id", String.valueOf(i));
 				fruit_details.putExtra("fruit_img", fruit_name.get(i));
 				fruit_details.putExtra("fruit_name", tv[i].getText().toString());
-				startActivity(fruit_details);			
+				startActivity(fruit_details);	
+				
 			}			
 		}
 		
-		
-		
-		
-		
-		
 	}
+	
+	
+	public void onStart(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink);
+		swip_up.startAnimation(myFadeInAnimation);
+		
+		
+		
+		 final Handler handler = new Handler();
+	        handler.postDelayed(new Runnable() {
+	          @Override
+	          public void run() {
+	        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
+	      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+	        	  swip_up.startAnimation(myFadeOutAnimation);
+	      		
+	            
+	            
+	          }
+	        }, 	4000);
+	}
+	
 
 }

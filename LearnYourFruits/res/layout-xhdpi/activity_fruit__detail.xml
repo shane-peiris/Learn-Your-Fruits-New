@@ -27,7 +27,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/menu_title_en" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -55,74 +54,75 @@
                         android:layout_marginTop="0dip"
                         android:scaleType="centerInside"
                         android:src="@drawable/apple1" />
-
                 </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/gallery_relative_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="150dip"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal" >
+                <RelativeLayout
+                    android:id="@+id/gallery_relative_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal" >
 
-        <ImageView
-            android:id="@+id/left_arrow_imageview"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/arrow_left_disabled" />
+                    <ImageView
+                        android:id="@+id/left_arrow_imageview"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:src="@drawable/arrow_left_disabled" />
 
-        <Gallery
-            android:id="@+id/gallery"
-            android:layout_width="0dip"
-            android:layout_height="150dip"
-            android:layout_marginLeft="20dip"
-            android:layout_marginRight="20dip"
-            android:layout_toLeftOf="@+id/right_arrow_imageview"
-            android:layout_toRightOf="@+id/left_arrow_imageview"
-            android:spacing="20dip" />
+                    <Gallery
+                        android:id="@+id/gallery"
+                        android:layout_width="0dip"
+                        android:layout_height="150dip"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_toLeftOf="@+id/right_arrow_imageview"
+                        android:layout_toRightOf="@+id/left_arrow_imageview"
+                        android:spacing="20dip" />
 
-        <ImageView
-            android:id="@+id/right_arrow_imageview"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dip"
-            android:src="@drawable/arrow_right_enabled" />
-    </RelativeLayout>
-                
+                    <ImageView
+                        android:id="@+id/right_arrow_imageview"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/arrow_right_enabled" />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <ViewFlipper
+            android:id="@+id/viewFlipper1"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:layout_weight="0"
-            android:orientation="vertical" >
+            android:layout_height="match_parent" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/txt_cur_fruit_name"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="cur_fruit_name"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textSize="32sp" />
+                    android:orientation="vertical" >
 
+                    <TextView
+                        android:id="@+id/txt_cur_fruit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="cur_fruit_name"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000000"
+                        android:textSize="32sp" />
+                </LinearLayout>
             </LinearLayout>
 
-        </LinearLayout>
-
+        </ViewFlipper>
     </LinearLayout>
     
 </LinearLayout>

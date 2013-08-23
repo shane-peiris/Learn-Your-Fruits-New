@@ -8,6 +8,12 @@
 package assign.project.learnyourfruits;
 
 public final class R {
+    public static final class anim {
+        public static final int left_in=0x7f040000;
+        public static final int left_out=0x7f040001;
+        public static final int right_in=0x7f040002;
+        public static final int right_out=0x7f040003;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -19,8 +25,8 @@ public final class R {
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int apple1=0x7f020000;
@@ -44,48 +50,49 @@ public final class R {
         public static final int test=0x7f020012;
     }
     public static final class id {
-        public static final int action_settings=0x7f080029;
-        public static final int gallery=0x7f080004;
-        public static final int gallery_relative_layout=0x7f080002;
-        public static final int imageView1=0x7f080000;
-        public static final int left_arrow_imageview=0x7f080003;
-        public static final int right_arrow_imageview=0x7f080005;
-        public static final int scrollView1=0x7f080008;
-        public static final int selected_imageview=0x7f080001;
-        public static final int tableRow1=0x7f080009;
-        public static final int tableRow10=0x7f080027;
-        public static final int tableRow11=0x7f08000c;
-        public static final int tableRow2=0x7f08000f;
-        public static final int tableRow3=0x7f080012;
-        public static final int tableRow4=0x7f080015;
-        public static final int tableRow5=0x7f080018;
-        public static final int tableRow6=0x7f08001b;
-        public static final int tableRow7=0x7f08001e;
-        public static final int tableRow8=0x7f080021;
-        public static final int tableRow9=0x7f080024;
-        public static final int txt_cur_fruit_name=0x7f080006;
-        public static final int txt_f_name1=0x7f08000a;
-        public static final int txt_f_name10=0x7f080017;
-        public static final int txt_f_name11=0x7f080019;
-        public static final int txt_f_name12=0x7f08001a;
-        public static final int txt_f_name13=0x7f08001c;
-        public static final int txt_f_name14=0x7f08001d;
-        public static final int txt_f_name15=0x7f08001f;
-        public static final int txt_f_name16=0x7f080020;
-        public static final int txt_f_name17=0x7f080025;
-        public static final int txt_f_name18=0x7f080023;
-        public static final int txt_f_name19=0x7f080022;
-        public static final int txt_f_name2=0x7f08000b;
-        public static final int txt_f_name20=0x7f080026;
-        public static final int txt_f_name21=0x7f080028;
-        public static final int txt_f_name3=0x7f08000d;
-        public static final int txt_f_name4=0x7f08000e;
-        public static final int txt_f_name5=0x7f080010;
-        public static final int txt_f_name6=0x7f080011;
-        public static final int txt_f_name7=0x7f080013;
-        public static final int txt_f_name8=0x7f080014;
-        public static final int txt_f_name9=0x7f080016;
-        public static final int txt_select_title=0x7f080007;
+        public static final int action_settings=0x7f09002a;
+        public static final int gallery=0x7f090004;
+        public static final int gallery_relative_layout=0x7f090002;
+        public static final int imageView1=0x7f090000;
+        public static final int left_arrow_imageview=0x7f090003;
+        public static final int right_arrow_imageview=0x7f090005;
+        public static final int scrollView1=0x7f090009;
+        public static final int selected_imageview=0x7f090001;
+        public static final int tableRow1=0x7f09000a;
+        public static final int tableRow10=0x7f090028;
+        public static final int tableRow11=0x7f09000d;
+        public static final int tableRow2=0x7f090010;
+        public static final int tableRow3=0x7f090013;
+        public static final int tableRow4=0x7f090016;
+        public static final int tableRow5=0x7f090019;
+        public static final int tableRow6=0x7f09001c;
+        public static final int tableRow7=0x7f09001f;
+        public static final int tableRow8=0x7f090022;
+        public static final int tableRow9=0x7f090025;
+        public static final int txt_cur_fruit_name=0x7f090007;
+        public static final int txt_f_name1=0x7f09000b;
+        public static final int txt_f_name10=0x7f090018;
+        public static final int txt_f_name11=0x7f09001a;
+        public static final int txt_f_name12=0x7f09001b;
+        public static final int txt_f_name13=0x7f09001d;
+        public static final int txt_f_name14=0x7f09001e;
+        public static final int txt_f_name15=0x7f090020;
+        public static final int txt_f_name16=0x7f090021;
+        public static final int txt_f_name17=0x7f090026;
+        public static final int txt_f_name18=0x7f090024;
+        public static final int txt_f_name19=0x7f090023;
+        public static final int txt_f_name2=0x7f09000c;
+        public static final int txt_f_name20=0x7f090027;
+        public static final int txt_f_name21=0x7f090029;
+        public static final int txt_f_name3=0x7f09000e;
+        public static final int txt_f_name4=0x7f09000f;
+        public static final int txt_f_name5=0x7f090011;
+        public static final int txt_f_name6=0x7f090012;
+        public static final int txt_f_name7=0x7f090014;
+        public static final int txt_f_name8=0x7f090015;
+        public static final int txt_f_name9=0x7f090017;
+        public static final int txt_select_title=0x7f090008;
+        public static final int viewFlipper1=0x7f090006;
     }
     public static final class layout {
         public static final int activity_fruit__detail=0x7f030000;
@@ -93,39 +100,39 @@ public final class R {
         public static final int activity_startup=0x7f030002;
     }
     public static final class menu {
-        public static final int fruit__detail=0x7f070000;
-        public static final int main_menu=0x7f070001;
-        public static final int startup=0x7f070002;
+        public static final int fruit__detail=0x7f080000;
+        public static final int main_menu=0x7f080001;
+        public static final int startup=0x7f080002;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int fr_apple=0x7f050007;
-        public static final int fr_avocado=0x7f050008;
-        public static final int fr_banana=0x7f050009;
-        public static final int fr_blackberries=0x7f05000a;
-        public static final int fr_cherries=0x7f05000b;
-        public static final int fr_dates=0x7f05000c;
-        public static final int fr_grape_fruit=0x7f05000d;
-        public static final int fr_grapes=0x7f05000e;
-        public static final int fr_guava=0x7f05000f;
-        public static final int fr_kiwifruit=0x7f050010;
-        public static final int fr_lemons=0x7f050011;
-        public static final int fr_limes=0x7f050012;
-        public static final int fr_mangoes=0x7f050013;
-        public static final int fr_oranges=0x7f050014;
-        public static final int fr_papayas=0x7f050015;
-        public static final int fr_peaches=0x7f050016;
-        public static final int fr_pear=0x7f050017;
-        public static final int fr_pineapple=0x7f050018;
-        public static final int fr_raspberries=0x7f050019;
-        public static final int fr_strawberries=0x7f05001a;
-        public static final int fr_watermelon=0x7f05001b;
-        public static final int hello_world=0x7f050002;
-        public static final int main_menu_select=0x7f050006;
-        public static final int title_activity_fruit__detail=0x7f050005;
-        public static final int title_activity_main_menu=0x7f050004;
-        public static final int title_activity_menu=0x7f050003;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int fr_apple=0x7f060007;
+        public static final int fr_avocado=0x7f060008;
+        public static final int fr_banana=0x7f060009;
+        public static final int fr_blackberries=0x7f06000a;
+        public static final int fr_cherries=0x7f06000b;
+        public static final int fr_dates=0x7f06000c;
+        public static final int fr_grape_fruit=0x7f06000d;
+        public static final int fr_grapes=0x7f06000e;
+        public static final int fr_guava=0x7f06000f;
+        public static final int fr_kiwifruit=0x7f060010;
+        public static final int fr_lemons=0x7f060011;
+        public static final int fr_limes=0x7f060012;
+        public static final int fr_mangoes=0x7f060013;
+        public static final int fr_oranges=0x7f060014;
+        public static final int fr_papayas=0x7f060015;
+        public static final int fr_peaches=0x7f060016;
+        public static final int fr_pear=0x7f060017;
+        public static final int fr_pineapple=0x7f060018;
+        public static final int fr_raspberries=0x7f060019;
+        public static final int fr_strawberries=0x7f06001a;
+        public static final int fr_watermelon=0x7f06001b;
+        public static final int hello_world=0x7f060002;
+        public static final int main_menu_select=0x7f060006;
+        public static final int title_activity_fruit__detail=0x7f060005;
+        public static final int title_activity_main_menu=0x7f060004;
+        public static final int title_activity_menu=0x7f060003;
     }
     public static final class style {
         /** 
@@ -167,7 +174,7 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
  Application theme. 
@@ -175,6 +182,6 @@ public final class R {
  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

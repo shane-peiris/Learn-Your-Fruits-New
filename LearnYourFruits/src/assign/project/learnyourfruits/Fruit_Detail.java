@@ -2,6 +2,10 @@ package assign.project.learnyourfruits;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +16,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.GestureDetector;
@@ -42,7 +47,8 @@ public class Fruit_Detail extends Activity {
 	private final GestureDetector detector = new GestureDetector(
 			new MyGestureDetector());
 	
-	
+	 
+	 
 	 private ImageView selectedImageView;
 
 	    private ImageView leftArrowImageView;
@@ -64,7 +70,7 @@ public class Fruit_Detail extends Activity {
 	
 	    public TextView cur_fruit_name;
 	    
-	    public ImageView swip_r,swip_l;
+	    public ImageView swip_r,swip_l,loading,loading_text;
 	    
 	    
 	@Override
@@ -84,7 +90,11 @@ public class Fruit_Detail extends Activity {
 		swip_r = (ImageView) findViewById(R.id.img_swip_r);
 		swip_l = (ImageView) findViewById(R.id.img_swip_l);
 		
+		loading=(ImageView) findViewById(R.id.img_loading);
+		loading.setImageBitmap(null);
+		loading.setBackgroundResource( R.anim.animation_list );
 		
+		loading_text=(ImageView) findViewById(R.id.img_loading_text);
 		
 		swip_prv();
 		
@@ -123,6 +133,7 @@ public class Fruit_Detail extends Activity {
 		vf.setOnTouchListener(new OnTouchListener() {
 	        @Override
 	        public boolean onTouch(final View view, final MotionEvent event) {
+	        	
 	        	
 	        	
 	        	detector.onTouchEvent(event);
@@ -260,23 +271,55 @@ public class Fruit_Detail extends Activity {
 	 
 	 public void swip_prv()
 	 {
+			 
+		 //worker.shutdownNow();
+		 
+		 final ScheduledExecutorService worker = 
+				  Executors.newSingleThreadScheduledExecutor();
+		 
 		 Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
 			swip_r.startAnimation(myFadeInAnimation);
-			swip_l.startAnimation(myFadeInAnimation);
+			//swip_l.startAnimation(myFadeInAnimation);
 			
 			
-			 final Handler handler = new Handler();
-		        handler.postDelayed(new Runnable() {
-		          @Override
-		          public void run() {
-		        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-		      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-		      		swip_r.startAnimation(myFadeOutAnimation);
-		      		swip_l.startAnimation(myFadeOutAnimation);
-		            
-		            
-		          }
-		        }, 	4000);
+			Runnable task = new Runnable() {
+			    public void run() {
+			      /* Do something… */
+			    	Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+			    	swip_r.startAnimation(myFadeOutAnimation);
+			    	Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
+			    	swip_l.startAnimation(myFadeInAnimation);
+			    	
+			    }
+			  };
+			  
+			  worker.schedule(task, 2, TimeUnit.SECONDS);
+			  
+			  Runnable task2 = new Runnable() {
+				    public void run() {
+				      /* Do something… */				    	
+				    	Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+				    	swip_l.startAnimation(myFadeOutAnimation);
+				    }
+				  };
+				  
+				  worker.schedule(task2, 4, TimeUnit.SECONDS);
+				  
+				  Runnable task3 = new Runnable() {
+					    public void run() {
+					      /* Do something… */				    	
+					    	try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+					    }
+					  };
+			
+					  worker.schedule(task3, 5, TimeUnit.SECONDS);
+		        
+		        
 		 
 		 
 	 }
@@ -362,12 +405,18 @@ public class Fruit_Detail extends Activity {
 		}
 	  
 	  class MyGestureDetector extends SimpleOnGestureListener {
+			@SuppressWarnings("deprecation")
 			@Override
 			public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 					float velocityY) {
 				try {
 
 					
+					
+					int resID1 =  getResources().getIdentifier("loading_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());
+	        		
+					loading_text.setImageResource(resID1);
+					//loading_text.setBackgroundResource(resID1);
 					
 					
 					// right to left swipe
@@ -397,12 +446,44 @@ public class Fruit_Detail extends Activity {
 						//Fruit_Detail.this.finish();
 						
 						
+						loading.setVisibility(View.VISIBLE);
+						loading_text.setVisibility(View.VISIBLE);
+						
+						
+						
+						final AnimationDrawable mailAnimation = (AnimationDrawable) loading.getBackground();
+						loading.post(new Runnable() {
+						    public void run() {
+						        if ( mailAnimation != null ) mailAnimation.start();
+						      }
+						});
+						
+						
 						try
-						{							
-							cur_fruit_name.setText(fruit_name.get(fruit_id));
-							getDrawablesList(fruit_img_name.get(fruit_id));
-					        setupUI();
-					        swip_prv();
+						{	
+							
+							final Handler handler = new Handler();
+					        handler.postDelayed(new Runnable() {
+					          @Override
+					          public void run() {
+					        	  cur_fruit_name.setText(fruit_name.get(fruit_id));
+									getDrawablesList(fruit_img_name.get(fruit_id));
+							        setupUI();
+							        
+									//swip_r.startAnimation(null);
+							        
+							        swip_prv();
+							        if ( mailAnimation != null ) mailAnimation.stop();
+							        loading.setVisibility(View.INVISIBLE);
+							        loading_text.setVisibility(View.INVISIBLE);
+					            
+					            
+					          }
+					        }, 7000);
+							
+							
+							
+							
 						}
 						catch(Exception ex)
 						{}
@@ -434,12 +515,39 @@ public class Fruit_Detail extends Activity {
 						//startActivity(fruit_details);	
 						//Fruit_Detail.this.finish();
 						
+						loading.setVisibility(View.VISIBLE);
+						loading_text.setVisibility(View.VISIBLE);
+						
+						final AnimationDrawable mailAnimation = (AnimationDrawable) loading.getBackground();
+						loading.post(new Runnable() {
+						    public void run() {
+						        if ( mailAnimation != null ) mailAnimation.start();
+						      }
+						});
+						
 						try
-						{							
-							cur_fruit_name.setText(fruit_name.get(fruit_id));
-							getDrawablesList(fruit_img_name.get(fruit_id));
-					        setupUI();
-					        swip_prv();
+						{	
+							
+							
+							final Handler handler = new Handler();
+					        handler.postDelayed(new Runnable() {
+					          @Override
+					          public void run() {
+					        	  cur_fruit_name.setText(fruit_name.get(fruit_id));
+									getDrawablesList(fruit_img_name.get(fruit_id));
+							        setupUI();
+							        
+							        //swip_l.startAnimation(null);
+									//swip_r.startAnimation(null);
+							        swip_prv();
+							        if ( mailAnimation != null ) mailAnimation.stop();
+							        loading.setVisibility(View.INVISIBLE);
+							        loading_text.setVisibility(View.INVISIBLE);
+					            
+					          }
+					        }, 7000);
+							
+							
 						}
 						catch(Exception ex)
 						{}

@@ -114,7 +114,7 @@ public class Fruit_Detail extends Activity {
 		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/delte.ttf");
 		
 		cur_fruit_name.setTypeface(tf2);
-		cur_fruit_name.setTextSize(65);
+		//cur_fruit_name.setTextSize(65);
 		cur_fruit_name.setTextColor(Color.parseColor("#fec01d"));
 		cur_fruit_name.setShadowLayer((float)7, (float)8, (float)5, Color.parseColor("#000000"));
 		
@@ -250,13 +250,13 @@ public class Fruit_Detail extends Activity {
 	        for (int i = 0; i < count; i++) {
 
 	            ImageView imageView = (ImageView) gallery.getChildAt(i);
-	            imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.image_border));
+	            //imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.image_border));
 	            imageView.setPadding(3, 3, 3, 3);
 
 	        }
 
 	        ImageView imageView = (ImageView) gallery.getSelectedView();
-	        imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.selected_image_border));
+	        //imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.selected_image_border));
 	        imageView.setPadding(3, 3, 3, 3);
 	    }
 	
@@ -275,39 +275,58 @@ public class Fruit_Detail extends Activity {
 		 //worker.shutdownNow();
 		 
 		 final ScheduledExecutorService worker = 
-				  Executors.newSingleThreadScheduledExecutor();
+				  Executors.newSingleThreadScheduledExecutor();		 
+		 
 		 
 		 Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
 			swip_r.startAnimation(myFadeInAnimation);
 			//swip_l.startAnimation(myFadeInAnimation);
 			
 			
-			Runnable task = new Runnable() {
-			    public void run() {
-			      /* Do something… */
-			    	Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-			    	swip_r.startAnimation(myFadeOutAnimation);
-			    	Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
-			    	swip_l.startAnimation(myFadeInAnimation);
-			    	
-			    }
-			  };
+			  final Handler handler = new Handler();
+		        handler.postDelayed(new Runnable() {
+		          @Override
+		          public void run() {
+		        	  //Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+				    	//swip_r.startAnimation(myFadeOutAnimation);
+				    	Animation myFadeInAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.blink);
+				    	swip_l.startAnimation(myFadeInAnimation);
+		            
+		          }
+		        }, 3000);	
 			  
-			  worker.schedule(task, 2, TimeUnit.SECONDS);
 			  
-			  Runnable task2 = new Runnable() {
+			  
+			  
+			  
+			  
+		        /*final Handler handler2 = new Handler();
+		        handler2.postDelayed(new Runnable() {
+		          @Override
+		          public void run() {
+		        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
+				    	swip_l.startAnimation(myFadeOutAnimation);
+		            
+		          }
+		        }, 5000);*/
+		        
+		        
+		        
+			  
+			  
+			  /*Runnable task2 = new Runnable() {
 				    public void run() {
-				      /* Do something… */				    	
+				       Do something… 			    	
 				    	Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
 				    	swip_l.startAnimation(myFadeOutAnimation);
 				    }
 				  };
 				  
-				  worker.schedule(task2, 4, TimeUnit.SECONDS);
+				  worker2.schedule(task2, 4, TimeUnit.SECONDS);*/	
 				  
-				  Runnable task3 = new Runnable() {
+				  /*  Runnable task3 = new Runnable() {
 					    public void run() {
-					      /* Do something… */				    	
+					      Do something… 			    	
 					    	try {
 								Thread.sleep(1000);
 							} catch (InterruptedException e) {
@@ -317,7 +336,7 @@ public class Fruit_Detail extends Activity {
 					    }
 					  };
 			
-					  worker.schedule(task3, 5, TimeUnit.SECONDS);
+					  worker3.schedule(task3, 5, TimeUnit.SECONDS);*/	
 		        
 		        
 		 

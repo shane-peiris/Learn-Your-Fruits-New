@@ -21,7 +21,7 @@ public class Startup extends Activity {
             Intent f_menu = new Intent(getApplicationContext(),
 					Main_menu.class);
             startActivity(f_menu);	
-            
+            Startup.this.finish();
             
           }
         }, 2000);

@@ -33,8 +33,9 @@ public class Main_menu extends Activity implements OnClickListener {
 	ArrayList<Integer> fruit_list = new ArrayList<Integer>();
 	ArrayList<String> fruit_name = new ArrayList<String>();
 	
-	 public ImageView swip_up,one_tap;
+	 public ImageView swip_up,one_tap,title;
 	 public LinearLayout m_full;
+	
 	 
 	 private static final ScheduledExecutorService worker = 
 			  Executors.newSingleThreadScheduledExecutor();
@@ -69,10 +70,10 @@ public class Main_menu extends Activity implements OnClickListener {
 		fruit_list.add(R.id.txt_f_name21);
 		
 		fruit_name.add("apple");
-		fruit_name.add("avacado");
+		fruit_name.add("avocado");
 		fruit_name.add("banana");
-		fruit_name.add("blackberries");
-		fruit_name.add("cherries");
+		fruit_name.add("blackberry");
+		fruit_name.add("cherry");
 		fruit_name.add("dates");
 		fruit_name.add("grapefruit");
 		fruit_name.add("guava");
@@ -86,8 +87,8 @@ public class Main_menu extends Activity implements OnClickListener {
 		fruit_name.add("peaches");
 		fruit_name.add("pears");
 		fruit_name.add("pineapple");
-		fruit_name.add("raspberries");
-		fruit_name.add("strawberries");
+		fruit_name.add("raspberry");
+		fruit_name.add("strawberry");
 		fruit_name.add("watermelon");
 		
 		
@@ -129,29 +130,40 @@ public class Main_menu extends Activity implements OnClickListener {
 		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/Minnie.TTF");	
 		Typeface tf3 = Typeface.createFromAsset(getAssets(), "fonts/delte.ttf");	
 		Typeface tf4 = Typeface.createFromAsset(getAssets(), "fonts/spanky.TTF");	
+		Typeface tf5 = Typeface.createFromAsset(getAssets(), "fonts/KBbubblegum.ttf");	
 	
 		txt_title.setTypeface(tf2);
 		//txt_title.setTextSize(38);
 		txt_title.setTextColor(Color.parseColor("#1a97cf"));
-		txt_title.setShadowLayer((float)2, (float)9, (float)5, Color.parseColor("#ef864c"));
+		txt_title.setShadowLayer((float)1, (float)2, (float)3, Color.parseColor("#000000"));
 		//txt_title.setEms(20);
 		
 		for (int i=0; i<21;i++)
 		{
 			
-			tv[i].setTypeface(tf3);	
+			tv[i].setTypeface(tf5);	
 			tv[i].setOnClickListener(this);
 			tv[i].setTextColor(Color.parseColor("#b81d66"));			
 			//tv[i].setTextSize(32);
-			tv[i].setShadowLayer((float)2, (float)2, (float)5, Color.parseColor("#000000"));
+			tv[i].setShadowLayer((float)1, (float)1, (float)4, Color.parseColor("#000000"));
 		}
 		
 		m_full = (LinearLayout) findViewById(R.id.l_full);
 		//m_full.setBackgroundColor(Color.parseColor("#000000"));
 		
 		
-		swip_up = (ImageView) findViewById(R.id.img_swipe_up);
-		one_tap = (ImageView) findViewById(R.id.img_one_tap);
+		title=(ImageView) findViewById(R.id.imageView1);
+		int resID3 =  getResources().getIdentifier("menu_title_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		title.setImageResource(resID3);
+		
+		
+		swip_up = (ImageView) findViewById(R.id.img_swipe_up);		
+		int resID1 =  getResources().getIdentifier("swipe_up_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		swip_up.setImageResource(resID1);		
+		
+		one_tap = (ImageView) findViewById(R.id.img_one_tap);		
+		int resID2 =  getResources().getIdentifier("single_tap_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		one_tap.setImageResource(resID2);
 		
 		Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink2);
 		
@@ -171,65 +183,9 @@ public class Main_menu extends Activity implements OnClickListener {
 		    	swip_up.startAnimation(myFadeInAnimation);
             
           }
-        }, 5000);
+        }, 4000);
 		
 		
-		
-		
-		
-		/*Runnable task = new Runnable() {
-		    public void run() {
-		       Do something… 
-		    	Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink2);
-		    	swip_up.startAnimation(myFadeInAnimation);
-		    	//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-		    	//one_tap.startAnimation(myFadeOutAnimation);
-		    	
-		    }
-		  };
-		  worker.schedule(task, 4, TimeUnit.SECONDS);*/
-		
-		  
-		  
-		  
-        /* final Handler handler = new Handler();
-	        handler.postDelayed(new Runnable() {
-	          @Override
-	          public void run() {
-	        	  //Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-		      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-		        	  //swip_up.startAnimation(myFadeOutAnimation);
-	            
-	          }
-	        }, 8000);*/
-		  
-		/*
-		  Runnable task2 = new Runnable() {
-			    public void run() {
-			      // Do something… 
-			    	 Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-			      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-			        	  swip_up.startAnimation(myFadeOutAnimation);
-			    }
-			  };
-			  worker2.schedule(task2, 10, TimeUnit.SECONDS);
-			*/
-			  
-			  
-				
-			  /*
-			 final Handler handler = new Handler();
-		        handler.postDelayed(new Runnable() {
-		          @Override
-		          public void run() {
-		        	  Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-		      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-		        	  swip_up.startAnimation(myFadeOutAnimation);
-		      		
-		            
-		            
-		          }
-		        }, 	4000);*/
 	}
 
 	@Override
@@ -242,11 +198,6 @@ public class Main_menu extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		
-		
 		
 		for(int i=0;i<21;i++)
 		{
@@ -264,35 +215,7 @@ public class Main_menu extends Activity implements OnClickListener {
 	}
 	
 	
-	/*public void onStart(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		
-		Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink);
-		
-		one_tap.startAnimation(myFadeInAnimation);
-		
-		Runnable task = new Runnable() {
-		    public void run() {
-		       //Do something… 
-		    	Animation myFadeInAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.blink);
-		    	swip_up.startAnimation(myFadeInAnimation);
-		    	Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-		    	one_tap.startAnimation(myFadeOutAnimation);
-		    }
-		  };
-		  worker.schedule(task, 4, TimeUnit.SECONDS);
-		
-		
-		  Runnable task2 = new Runnable() {
-			    public void run() {
-			      // Do something… 
-			    	 Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Main_menu.this, R.anim.off);
-			      		//Animation myFadeOutAnimation = AnimationUtils.loadAnimation(Fruit_Detail.this, R.anim.off);
-			        	  swip_up.startAnimation(myFadeOutAnimation);
-			    }
-			  };
-			  worker.schedule(task2, 10, TimeUnit.SECONDS);
-	}*/
+	
 	
 
 }

@@ -52,12 +52,15 @@
 
                         <ImageView
                             android:id="@+id/selected_imageview"
-                            android:layout_width="fill_parent"
+                            android:layout_width="match_parent"
                             android:layout_height="178dp"
-                            android:layout_marginLeft="30dip"
-                            android:layout_marginRight="30dip"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
                             android:layout_marginTop="0dip"
-                            android:scaleType="centerInside" />
+                            android:adjustViewBounds="false"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/banana1" />
+
                     </LinearLayout>
 
                     <RelativeLayout

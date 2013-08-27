@@ -10,12 +10,12 @@
     <string name="main_menu_select">Select a Fruit</string>
     
     <string name="fr_apple">Apple</string>
-    <string name="fr_avocado">Avacado</string>
+    <string name="fr_avocado">Avocado</string>
     <string name="fr_banana">Banana</string>    
-    <string name="fr_blackberries">Blackberries</string>
-    <string name="fr_cherries">Cherries</string>
+    <string name="fr_blackberry">Blackberry</string>
+    <string name="fr_cherry">Cherry</string>
     <string name="fr_dates">Dates</string>   
-    <string name="fr_grape_fruit">Grape Fruit</string>
+    <string name="fr_grapefruit">Grape Fruit</string>
     <string name="fr_grapes">Grapes</string>
     <string name="fr_guava">Guava</string>
     <string name="fr_kiwifruit">Kiwi Fruit</string>
@@ -27,8 +27,8 @@
     <string name="fr_peaches">Peaches</string>
     <string name="fr_pear">Pears</string>
     <string name="fr_pineapple">Pineapple</string>
-    <string name="fr_raspberries">Raspberries</string>
-    <string name="fr_strawberries">Strawberries</string>
+    <string name="fr_raspberry">Raspberry</string>
+    <string name="fr_strawberry">Strawberry</string>
     <string name="fr_watermelon">Watermelon</string>
     
 

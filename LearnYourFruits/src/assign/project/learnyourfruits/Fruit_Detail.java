@@ -66,11 +66,11 @@ public class Fruit_Detail extends Activity {
 	    ArrayList<String> fruit_img_name = new ArrayList<String>();
 	    ArrayList<String> fruit_name = new ArrayList<String>();
 	
-	    public int fruit_id;
+	    public int fruit_id=0;
 	
 	    public TextView cur_fruit_name;
 	    
-	    public ImageView swip_r,swip_l,loading,loading_text;
+	    public ImageView swip_r,swip_l,loading,loading_text,title;
 	    
 	    
 	@Override
@@ -87,8 +87,17 @@ public class Fruit_Detail extends Activity {
 		Bundle fruit_details = getIntent().getExtras();
 		
 		cur_fruit_name = (TextView) findViewById(R.id.txt_cur_fruit_name);
+		
+		title=(ImageView) findViewById(R.id.imageView1);
+		int resID3 =  getResources().getIdentifier("menu_title_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		title.setImageResource(resID3);
+		
 		swip_r = (ImageView) findViewById(R.id.img_swip_r);
+		int resID1 =  getResources().getIdentifier("swipe_right_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		swip_r.setImageResource(resID1);		
 		swip_l = (ImageView) findViewById(R.id.img_swip_l);
+		int resID2 =  getResources().getIdentifier("swipe_left_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());		
+		swip_l.setImageResource(resID2);		
 		
 		loading=(ImageView) findViewById(R.id.img_loading);
 		loading.setImageBitmap(null);
@@ -111,9 +120,10 @@ public class Fruit_Detail extends Activity {
 		cur_fruit_name.setText(fruit_name.toString());
 		
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/JandaCloserToFree.ttf");		
+		Typeface tf5 = Typeface.createFromAsset(getAssets(), "fonts/KBbubblegum.ttf");
 		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/delte.ttf");
 		
-		cur_fruit_name.setTypeface(tf2);
+		cur_fruit_name.setTypeface(tf5);
 		//cur_fruit_name.setTextSize(65);
 		cur_fruit_name.setTextColor(Color.parseColor("#fec01d"));
 		cur_fruit_name.setShadowLayer((float)7, (float)8, (float)5, Color.parseColor("#000000"));
@@ -251,20 +261,21 @@ public class Fruit_Detail extends Activity {
 
 	            ImageView imageView = (ImageView) gallery.getChildAt(i);
 	            //imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.image_border));
-	            imageView.setPadding(3, 3, 3, 3);
+	            //imageView.setPadding(3, 3, 3, 3);
 
 	        }
 
 	        ImageView imageView = (ImageView) gallery.getSelectedView();
 	        //imageView.setBackgroundDrawable(getResources().getDrawable(R.drawable.selected_image_border));
-	        imageView.setPadding(3, 3, 3, 3);
+	        //imageView.setPadding(3, 3, 3, 3);
 	    }
 	
 	 private void setSelectedImage(int selectedImagePosition) {
 
 	        BitmapDrawable bd = (BitmapDrawable) drawables.get(selectedImagePosition);
-	        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight()), (int) (bd.getIntrinsicWidth()), false);
-	        selectedImageView.setImageBitmap(b);
+	        //Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight()), (int) (bd.getIntrinsicWidth()), false);
+	        //selectedImageView.setImageBitmap(b);
+	        selectedImageView.setImageBitmap(bd.getBitmap());
 	        //selectedImageView.setScaleType(ScaleType.FIT_XY);
 
 	    }
@@ -375,10 +386,10 @@ public class Fruit_Detail extends Activity {
 	  public void init_array()
 		{
 			fruit_name.add("Apple");
-			fruit_name.add("Avacado");
+			fruit_name.add("Avocado");
 			fruit_name.add("Banana");
-			fruit_name.add("Blackberries");
-			fruit_name.add("Cherries");
+			fruit_name.add("Blackberry");
+			fruit_name.add("Cherry");
 			fruit_name.add("Dates");
 			fruit_name.add("Grape Fruit");
 			fruit_name.add("Guava");
@@ -392,15 +403,15 @@ public class Fruit_Detail extends Activity {
 			fruit_name.add("Peaches");
 			fruit_name.add("Pears");
 			fruit_name.add("Pineapple");
-			fruit_name.add("Raspberries");
-			fruit_name.add("Strawberries");
+			fruit_name.add("Raspberry");
+			fruit_name.add("Strawberry");
 			fruit_name.add("Watermelon");	
 			
 			fruit_img_name.add("apple");
-			fruit_img_name.add("avacado");
+			fruit_img_name.add("avocado");
 			fruit_img_name.add("banana");
-			fruit_img_name.add("blackberries");
-			fruit_img_name.add("cherries");
+			fruit_img_name.add("blackberry");
+			fruit_img_name.add("cherry");
 			fruit_img_name.add("dates");
 			fruit_img_name.add("grapefruit");
 			fruit_img_name.add("guava");
@@ -414,8 +425,8 @@ public class Fruit_Detail extends Activity {
 			fruit_img_name.add("peaches");
 			fruit_img_name.add("pears");
 			fruit_img_name.add("pineapple");
-			fruit_img_name.add("raspberries");
-			fruit_img_name.add("strawberries");
+			fruit_img_name.add("raspberry");
+			fruit_img_name.add("strawberry");
 			fruit_img_name.add("watermelon");
 			
 			
@@ -430,7 +441,7 @@ public class Fruit_Detail extends Activity {
 					float velocityY) {
 				try {
 
-					
+					 
 					
 					int resID1 =  getResources().getIdentifier("loading_"+Locale.getDefault().getLanguage().toString(), "drawable", getPackageName());
 	        		
@@ -449,9 +460,9 @@ public class Fruit_Detail extends Activity {
 						
 						//Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
 						
-						int temp_fruit_id=0;
+						//int temp_fruit_id=0;
 						
-						if(fruit_id+1 > 21)						
+						if(fruit_id+1 > 20)						
 							fruit_id=0;						
 						else
 							fruit_id++;
@@ -485,7 +496,10 @@ public class Fruit_Detail extends Activity {
 					        handler.postDelayed(new Runnable() {
 					          @Override
 					          public void run() {
-					        	  cur_fruit_name.setText(fruit_name.get(fruit_id));
+					        	  
+					        	  int resID2=  getResources().getIdentifier("fr_"+fruit_img_name.get(fruit_id).toString(), "string", getPackageName());
+					        		
+					        	  cur_fruit_name.setText(resID2);
 									getDrawablesList(fruit_img_name.get(fruit_id));
 							        setupUI();
 							        
@@ -498,7 +512,7 @@ public class Fruit_Detail extends Activity {
 					            
 					            
 					          }
-					        }, 7000);
+					        }, 5000);
 							
 							
 							
@@ -519,10 +533,10 @@ public class Fruit_Detail extends Activity {
 						
 						//Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT);
 						
-						int temp_fruit_id=0;
+						//int temp_fruit_id=0;
 						
 						if(fruit_id-1 < 0)
-							fruit_id=21;
+							fruit_id=20;
 						else
 							fruit_id--;
 						
@@ -552,7 +566,11 @@ public class Fruit_Detail extends Activity {
 					        handler.postDelayed(new Runnable() {
 					          @Override
 					          public void run() {
-					        	  cur_fruit_name.setText(fruit_name.get(fruit_id));
+					        	  
+					        	  int  resID3 =  getResources().getIdentifier("fr_"+fruit_img_name.get(fruit_id).toString(), "string", getPackageName());
+					        		
+					        	  cur_fruit_name.setText(resID3);
+					        	  //cur_fruit_name.setText(fruit_name.get(fruit_id));
 									getDrawablesList(fruit_img_name.get(fruit_id));
 							        setupUI();
 							        
@@ -564,7 +582,7 @@ public class Fruit_Detail extends Activity {
 							        loading_text.setVisibility(View.INVISIBLE);
 					            
 					          }
-					        }, 7000);
+					        }, 5000);
 							
 							
 						}

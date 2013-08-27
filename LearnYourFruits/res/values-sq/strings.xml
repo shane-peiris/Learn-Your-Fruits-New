@@ -12,10 +12,10 @@
     <string name="fr_apple">Mollë</string>
     <string name="fr_avocado">Avokado</string>
     <string name="fr_banana">Banane</string>    
-    <string name="fr_blackberries">Manaferra</string>
-    <string name="fr_cherries">Vishnje</string>
+    <string name="fr_blackberry">Manaferra</string>
+    <string name="fr_cherry">Vishnje</string>
     <string name="fr_dates">Datat</string>   
-    <string name="fr_grape_fruit">Fruta rrushit</string>
+    <string name="fr_grapefruit">Fruta rrushit</string>
     <string name="fr_grapes">Rrush</string>
     <string name="fr_guava">Gujava</string>
     <string name="fr_kiwifruit">Fruta Kivi</string>
@@ -27,8 +27,8 @@
     <string name="fr_peaches">Pjeshkë</string>
     <string name="fr_pear">Dardha</string>
     <string name="fr_pineapple">Pineapple</string>
-    <string name="fr_raspberries">Mjedër</string>
-    <string name="fr_strawberries">Luleshtrydhe</string>
+    <string name="fr_raspberry">Mjedër</string>
+    <string name="fr_strawberry">Luleshtrydhe</string>
     <string name="fr_watermelon">Shalqi</string>
     
 </resources>

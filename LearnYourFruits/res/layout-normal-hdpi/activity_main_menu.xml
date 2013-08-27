@@ -148,7 +148,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
-                                        android:text="@string/fr_blackberries"
+                                        android:text="@string/fr_blackberry"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="#00a2ff"
                                         android:textSize="24sp" />
@@ -174,7 +174,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:gravity="center"
-                                        android:text="@string/fr_cherries"
+                                        android:text="@string/fr_cherry"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="#00a2ff"
                                         android:textSize="24sp" />
@@ -217,7 +217,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
-                                        android:text="@string/fr_grape_fruit"
+                                        android:text="@string/fr_grapefruit"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="#00a2ff"
                                         android:textSize="24sp" />
@@ -432,7 +432,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
-                                        android:text="@string/fr_raspberries"
+                                        android:text="@string/fr_raspberry"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="#00a2ff"
                                         android:textSize="24sp" />
@@ -493,7 +493,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:gravity="center"
-                                        android:text="@string/fr_strawberries"
+                                        android:text="@string/fr_strawberry"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="#00a2ff"
                                         android:textSize="24sp" />

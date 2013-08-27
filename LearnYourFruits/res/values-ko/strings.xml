@@ -12,10 +12,10 @@
     <string name="fr_apple">사과</string>
     <string name="fr_avocado">아보카도</string>
     <string name="fr_banana">바나나</string>    
-    <string name="fr_blackberries">블랙 베리</string>
-    <string name="fr_cherries">버찌</string>
+    <string name="fr_blackberry">블랙 베리</string>
+    <string name="fr_cherry">버찌</string>
     <string name="fr_dates">날짜</string>   
-    <string name="fr_grape_fruit">자몽</string>
+    <string name="fr_grapefruit">자몽</string>
     <string name="fr_grapes">포도</string>
     <string name="fr_guava">구아바</string>
     <string name="fr_kiwifruit">키위 과일</string>
@@ -27,8 +27,8 @@
     <string name="fr_peaches">복숭아</string>
     <string name="fr_pear">배</string>
     <string name="fr_pineapple">파인애플</string>
-    <string name="fr_raspberries">산딸기</string>
-    <string name="fr_strawberries">딸기</string>
+    <string name="fr_raspberry">산딸기</string>
+    <string name="fr_strawberry">딸기</string>
     <string name="fr_watermelon">수박</string>
     
 

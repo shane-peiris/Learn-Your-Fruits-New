@@ -111,13 +111,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -137,6 +130,14 @@
                                         android:textSize="30sp" />
                                 </LinearLayout>
 
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp" >
+
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -153,14 +154,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="40dp"
-                                android:layout_weight="1" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -200,7 +193,7 @@
                             </TableRow>
 
                             <TableRow
-                                android:id="@+id/tableRow3"
+                                android:id="@+id/tableRow2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_marginTop="40dp"
@@ -240,14 +233,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="40dp"
-                                android:layout_weight="1" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -267,6 +252,15 @@
                                         android:textSize="30sp" />
                                 </LinearLayout>
 
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_weight="1" >
+
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -283,14 +277,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="40dp"
-                                android:layout_weight="1" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -330,7 +316,7 @@
                             </TableRow>
 
                             <TableRow
-                                android:id="@+id/tableRow6"
+                                android:id="@+id/tableRow4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_marginTop="40dp"
@@ -370,14 +356,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="40dp"
-                                android:layout_weight="1" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -397,6 +375,15 @@
                                         android:textSize="30sp" />
                                 </LinearLayout>
 
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_weight="1" >
+
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -413,13 +400,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -458,10 +438,11 @@
                             </TableRow>
 
                             <TableRow
-                                android:id="@+id/tableRow9"
+                                android:id="@+id/tableRow6"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp" >
+                                android:layout_height="0dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_weight="1" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -498,13 +479,6 @@
                                         android:textColor="#00a2ff"
                                         android:textSize="30sp" />
                                 </LinearLayout>
-                            </TableRow>
-
-                            <TableRow
-                                android:id="@+id/tableRow10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp" >
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -524,12 +498,36 @@
                                         android:textSize="30sp" />
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:gravity="center" >
-                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_weight="1" >
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp" >
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp" >
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp" >
                             </TableRow>
                         </TableLayout>
                     </RelativeLayout>
